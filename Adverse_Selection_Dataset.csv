@@ -1,0 +1,31 @@
+﻿Character Descriptions,"Pr(minor), Cost=$8,000","Pr(major), Cost=$200,000",Expected Cost of Care,Bronze,Silver,Gold
+1: A healthy 26-year-old,1.00%,0.01%,100,63,76,100
+2: A healthy 26-year-old,1.00%,0.01%,100,63,76,100
+3: A healthy 27-year-old,1.00%,0.01%,100,63,76,100
+4: A healthy 27-year-old,1.00%,0.01%,100,63,76,100
+5: A healthy 28-year-old,1.00%,0.01%,100,63,76,100
+6: A healthy 30-year-old,1.00%,0.01%,100,63,76,100
+7: A healthy 33-year-old,1.00%,0.01%,100,63,76,100
+8: A healthy 35-year-old,1.00%,0.01%,100,63,76,100
+9: A healthy 40-year-old,1.00%,0.01%,100,63,76,100
+10: A healthy 38-year-old,1.00%,0.01%,100,63,76,100
+11: A healthy 40-year-old,1.00%,0.01%,100,63,76,100
+12: A healthy 42-year-old,2.00%,0.01%,180,112,136,180
+13: A healthy 58-year-old,3.00%,0.02%,280,175,212,280
+14: A 41-year-old with a history of stomach ulcers,4.00%,0.02%,360,224,272,360
+15: An overweight 46-year-old with a peanut allergy,4.00%,0.02%,360,224,272,360
+16: An overweight 45-year-old with controlled asthma,5.00%,0.03%,460,287,348,460
+17: A 36-year-old with with infertility problems,6.00%,0.03%,540,336,408,540
+18: A 35-year-old with a history of asthma hospitalizations,6.00%,0.03%,540,336,408,540
+19: A 55-year-old on heart medications,7.00%,0.08%,720,454,548,720
+20: A 33-year-old with a history of panic attacks,7.00%,0.25%,1060,691,819,1060
+21: An overweight 40-year-old with a history of migraines,8.00%,0.75%,2140,1437,1677,2140
+22: A 57-year-old with a history of depression,9.00%,1.00%,2720,1835,2136,2720
+23: A 27-year-old soccer player with a history of injury,10.00%,1.20%,3200,2162,2516,3200
+24: A 28-year-old football player with a history of injury,12.00%,1.25%,3460,2330,2716,3460
+25: An overweight 52-year-old with migraines,18.00%,2.00%,5440,3671,4273,5440
+26: A 35-year-old with diabetes.,20.00%,2.25%,6100,4117,4793,6100
+27: An obese 50-year-old smoker with heart disease,25.00%,4.00%,10000,6804,7888,10000
+28: An obese 55-year-old with uncontrolled diabetes,30.00%,8.00%,18400,12631,14578,18400
+29: A 32-year-old in remission from cancer,40.00%,20.00%,43200,29876,34352,43200
+30: A 60-year-old with cancer,80.00%,70.00%,146400,101822,116744,146400
