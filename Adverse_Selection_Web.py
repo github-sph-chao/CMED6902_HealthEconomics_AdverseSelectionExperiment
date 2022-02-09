@@ -37,7 +37,6 @@ if page=='About this Web App':
     st.write("**Adverse Selection** occurs as a result of asymmetric information of on the characteristics of the insured between the insurer and insured in the health insurance market. Individuals may have better idea of their risk status than does the insurance company. Insurer set upprice premium based on the “average” probability of adverse event.")
    
     st.write("Low risk individuals may find it difficult to obtain a fair insurance premium since the average premium is higher than their expected cost of future health care as shown in the dataset, so they drop out of the insurance pool. Once a low risk individual drops out, insurer makes a loss at the original premium, so he responds by adjusting the premium upwards to the “new average premium”.") 
-    
     st.write("The higher the new average premium, the more individuals drop out since their expected cost of future health care is lower than the new average premium, leaving only the high risk individuals in the insurance pool who find the premium becomes unaffordable until the market collapse – this is known as a death spiral. Just like what is shown in the dataset that the average premium of Gold package is getting higher when healthy insured starts to drop out. It is also noticed in the data that if the insurance package is separated to the young and the old group, the premium for the old will be very expensive.")
 
 # web body - B
@@ -94,7 +93,7 @@ elif page=="Run Experiment":
     Bronze_raw, Silver_raw, Gold_raw = round(sum(df["Bronze($)"])/30), round(sum(df["Silver($)"])/30), round(sum(df["Gold($)"])/30)
     AVERAGE, RAW = [Bronze_average, Silver_average, Gold_average], [Bronze_raw, Silver_raw, Gold_raw]
 
-    st.write("**Original AVERAGE prices:** Bronze=${}, Silver=${}, Gold=${}".format(Bronze_raw, Silver_raw, Gold_raw))
-    st.write("**Current AVERAGE prices:** Bronze=${}, Silver=${}, Gold=${}".format(Bronze_average, Silver_average, Gold_average))
+    st.write("**Original AVERAGE prices:**  Bronze=${} Silver=${} Gold=${}".format(Bronze_raw, Silver_raw, Gold_raw))
+    st.write("**Current AVERAGE prices:**   Bronze=${} Silver=${} Gold=${}".format(Bronze_average, Silver_average, Gold_average))
     plot = pd.DataFrame({"1) Original": RAW, "2) Current": AVERAGE}, index=["Plan A: Bronze", "Plan B: Silver", "Plan C: Gold"]).T
     st.bar_chart(data=plot, width=50, height=500)
