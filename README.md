@@ -1,1 +1,1 @@
-# CMED6902_HealthEconomics_AdverseSelectionExperiment
+# Adverse Experiment: A Classroom Experiment
