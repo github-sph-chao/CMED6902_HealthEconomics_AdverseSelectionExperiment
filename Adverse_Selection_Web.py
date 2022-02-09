@@ -29,6 +29,7 @@ st.sidebar.write("**Developer note**: This web app is developed with Python and 
 # web body
 page = st.selectbox("Please choose a page", ["About this Web App", "View/Download Dataset", "Run Experiment"])
 
+# web body - A
 if page=='About this Web App':
     st.subheader("About this Web App")
     st.write("This web app is run as a seminar activity for Health Economics. The activity mimics the consumer decision making, price rises and market collapse in heatlh insurance market, illustrating the concept of Adverse Selection.")
@@ -39,6 +40,7 @@ if page=='About this Web App':
     
     st.write("The higher the new average premium, the more individuals drop out since their expected cost of future health care is lower than the new average premium, leaving only the high risk individuals in the insurance pool who find the premium becomes unaffordable until the market collapse – this is known as a death spiral. Just like what is shown in the dataset that the average premium of Gold package is getting higher when healthy insured starts to drop out. It is also noticed in the data that if the insurance package is separated to the young and the old group, the premium for the old will be very expensive.")
 
+# web body - B
 elif page=="View/Download Dataset":
     st.subheader("View/Downlad Dataset")
     @st.cache
@@ -53,6 +55,7 @@ elif page=="View/Download Dataset":
 
     st.table(df)
 
+# web body - C
 elif page=="Run Experiment":
     st.subheader("Run Experiment")
 
@@ -90,7 +93,7 @@ elif page=="Run Experiment":
     Bronze_average, Silver_average, Gold_average = round(sum(Bronze_cal)/30), round(sum(Silver_cal)/30), round(sum(Gold_cal)/30)
     Bronze_raw, Silver_raw, Gold_raw = round(sum(df["Bronze($)"])/30), round(sum(df["Silver($)"])/30), round(sum(df["Gold($)"])/30)
     AVERAGE, RAW = [Bronze_average, Silver_average, Gold_average], [Bronze_raw, Silver_raw, Gold_raw]
-            
+
     st.write("**Original AVERAGE prices:** Bronze=${}, Silver=${}, Gold=${}".format(Bronze_raw, Silver_raw, Gold_raw))
     st.write("**Current AVERAGE prices:** Bronze=${}, Silver=${}, Gold=${}".format(Bronze_average, Silver_average, Gold_average))
     plot = pd.DataFrame({"1) Original": RAW, "2) Current": AVERAGE}, index=["Plan A: Bronze", "Plan B: Silver", "Plan C: Gold"]).T
