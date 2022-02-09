@@ -9,7 +9,7 @@ import numpy as np
 
 # general web layout & data
 st.set_page_config(layout="wide")
-csv_gh = "https://raw.githubusercontent.com/github-sph-chao/CMED6902_HealthEconomics_AdverseSelectionExperiment/main/Adverse_Selection_Dataset.csv?token=GHSAT0AAAAAABRM3BJCMSQ25D6VARQG7EYKYQDULAQ"
+csv_gh = "https://github.com/github-sph-chao/CMED6902_HealthEconomics_AdverseSelectionExperiment/blob/main/Adverse_Selection_Dataset.csv"
 df = pd.read_csv(csv_gh)
 df.columns=["Character Descriptions", "Pr(minor), Cost=$8K", "Pr(major), Cost=$200K",
             "Expected Cost of Care($)", "Bronze($)", "Silver($)", "Gold($)"]
