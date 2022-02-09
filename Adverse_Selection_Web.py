@@ -17,8 +17,7 @@ st.set_page_config(layout="wide")
 # dataset, remember to use the RAW link
 csv_gh = "https://raw.githubusercontent.com/github-sph-chao/CMED6902_HealthEconomics_AdverseSelectionExperiment/main/Adverse_Selection_Dataset.csv"
 df = pd.read_csv(csv_gh)
-df.columns=["Character Descriptions", "Pr(minor), Cost=$8K", "Pr(major), Cost=$200K",
-            "Expected Cost of Care($)", "Bronze($)", "Silver($)", "Gold($)"]
+df.columns=["Character Descriptions", "Pr(minor), Cost=$8K", "Pr(major), Cost=$200K", "Expected Cost of Care($)", "Bronze($)", "Silver($)", "Gold($)"]
 
 # web sidebar
 st.sidebar.write("**CMED6902 Health Economics**")
@@ -47,16 +46,15 @@ elif page=="View/Download Dataset":
         return dataframe.to_csv().encode('utf-8')
         
     csv = convert_df(df)
-    st.download_button(
-     label="Download data as CSV", data=csv,
-     file_name='Adverse_Experiment.csv',
-     mime='text/csv')
-
+    st.download_button(label="Download data as CSV", data=csv, file_name='Adverse_Experiment.csv', mime='text/csv')          
     st.table(df)
 
 # web body - C
 elif page=="Run Experiment":
     st.subheader("Run Experiment")
+    
+    with st.expander("See character descriptions"):
+            st.write(list(df["Character Descriptions"]))
 
     Bronze=[]
     for i,j in zip(range(1,31), df["Bronze($)"]):
