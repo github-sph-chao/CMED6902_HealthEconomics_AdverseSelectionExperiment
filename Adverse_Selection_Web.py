@@ -1,5 +1,5 @@
 #Developer: Noel Liang
-#Developer Note: The app requires Streamlit Cloud for App launch and full use
+#Developer Note: The app requires Streamlit Cloud - https://share.streamlit.io/ - for full App launch 
 #Developer version Github: https://github.com/Noel-Ocean/HealthEconomics_AdverseSelectionExperiment
 #Developer version Web App: https://share.streamlit.io/noel-ocean/healtheconomics_adverseselectionexperiment/main/Adverse_Selection_Web.py
 
