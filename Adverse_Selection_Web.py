@@ -54,7 +54,7 @@ elif page=="Run Experiment":
     st.subheader("Run Experiment")
     
     with st.expander("See character descriptions"):
-            st.write(list(df["Character Descriptions"]))
+            st.write(df["Character Descriptions"])
 
     Bronze=[]
     for i,j in zip(range(1,31), df["Bronze($)"]):
@@ -89,9 +89,11 @@ elif page=="Run Experiment":
 
     Bronze_average, Silver_average, Gold_average = round(sum(Bronze_cal)/30), round(sum(Silver_cal)/30), round(sum(Gold_cal)/30)
     Bronze_raw, Silver_raw, Gold_raw = round(sum(df["Bronze($)"])/30), round(sum(df["Silver($)"])/30), round(sum(df["Gold($)"])/30)
+    
     AVERAGE, RAW = [Bronze_average, Silver_average, Gold_average], [Bronze_raw, Silver_raw, Gold_raw]
 
     st.write("**Original AVERAGE prices:** Bronze=${}$, Silver=${}$, Gold=${}$".format(Bronze_raw, Silver_raw, Gold_raw))
     st.write("**Current AVERAGE prices:** Bronze=${}$, Silver=${}$, Gold=${}$".format(Bronze_average, Silver_average, Gold_average))
+    
     plot = pd.DataFrame({"1) Original": RAW, "2) Current": AVERAGE}, index=["Plan A: Bronze", "Plan B: Silver", "Plan C: Gold"]).T
     st.bar_chart(data=plot, width=50, height=500)
